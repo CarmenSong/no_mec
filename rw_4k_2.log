@@ -1,0 +1,22 @@
+test: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=sync, iodepth=64
+fio-3.30
+Starting 1 process
+
+test: (groupid=0, jobs=1): err= 0: pid=527: Fri Mar  9 13:13:27 2018
+  write: IOPS=19.3k, BW=75.4MiB/s (79.1MB/s)(1509MiB/20001msec); 0 zone resets
+    clat (usec): min=24, max=5901, avg=29.94, stdev=32.69
+     lat (usec): min=25, max=5902, avg=30.98, stdev=32.92
+   bw (  KiB/s): min=72825, max=81939, per=100.00%, avg=77344.26, stdev=2123.88, samples=39
+   iops        : min=18206, max=20484, avg=19335.79, stdev=530.98, samples=39
+  lat (usec)   : 50=97.19%, 100=1.76%, 250=0.72%, 500=0.32%, 750=0.01%
+  lat (usec)   : 1000=0.01%
+  lat (msec)   : 10=0.01%
+  cpu          : usr=30.99%, sys=65.64%, ctx=5914, majf=0, minf=40
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,386211,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+  WRITE: bw=75.4MiB/s (79.1MB/s), 75.4MiB/s-75.4MiB/s (79.1MB/s-79.1MB/s), io=1509MiB (1582MB), run=20001-20001msec

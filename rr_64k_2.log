@@ -1,0 +1,21 @@
+test: (g=0): rw=randread, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=sync, iodepth=64
+fio-3.30
+Starting 1 process
+
+test: (groupid=0, jobs=1): err= 0: pid=477: Fri Mar  9 13:08:23 2018
+  read: IOPS=2785, BW=174MiB/s (183MB/s)(3483MiB/20004msec)
+    clat (usec): min=243, max=6248, avg=305.94, stdev=132.10
+     lat (usec): min=244, max=6249, avg=307.14, stdev=132.19
+   bw (  KiB/s): min=137362, max=187126, per=100.00%, avg=178527.70, stdev=7845.98, samples=40
+   iops        : min= 2146, max= 2923, avg=2789.15, stdev=122.54, samples=40
+  lat (usec)   : 250=0.01%, 500=96.34%, 750=3.42%, 1000=0.16%
+  lat (msec)   : 2=0.03%, 4=0.01%, 10=0.04%
+  cpu          : usr=6.31%, sys=60.95%, ctx=58929, majf=0, minf=40
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=55730,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=174MiB/s (183MB/s), 174MiB/s-174MiB/s (183MB/s-183MB/s), io=3483MiB (3652MB), run=20004-20004msec
